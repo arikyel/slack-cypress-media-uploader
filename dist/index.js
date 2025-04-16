@@ -108,7 +108,7 @@ function run() {
             }
             if (videos.length > 0) {
                 core.debug('Uploading videos...');
-                yield Promise.all(screenshots.map((video) => __awaiter(this, void 0, void 0, function* () {
+                yield Promise.all(videos.map((video) => __awaiter(this, void 0, void 0, function* () {
                     yield uploadMedia(slack, { media: video, workdir, channelId, threadId, token });
                 })));
             }
